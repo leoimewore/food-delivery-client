@@ -90,7 +90,7 @@ const Navbar = ({links}) => {
           left: 0,
           background: "linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent)",
           width: '100%',
-        
+          height:"100%",
           bgcolor: 'rgba(0, 0, 0, 0.7)',
           color: 'white',
           padding: '10px',
