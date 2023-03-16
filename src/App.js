@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Box } from '@mui/system'
+import { CssBaseline,Grid } from '@mui/material';
+import Navbar from './components/Navbar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+
+const style={
+  
+    minHeight:"100vh",
+    width:"100%",
+    objectFit:"cover",
+    backgroundImage:`url(${process.env.PUBLIC_URL + "/assets/homeimage2.jpg"})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    maxWidth:"100%",
+    height: "auto",
+    padding: 0,
+    margin: 0,
+    
+
 }
 
-export default App;
+
+const links=["Home","Menu","About","Order Online","Contact Us"]
+
+const App = () => {
+ 
+  return (
+    <Grid container>
+      <Box sx={{...style}}>
+        <CssBaseline/>
+        </Box>
+  
+  
+    <BrowserRouter><Navbar links={links}/></BrowserRouter>
+    </Grid>
+
+
+
+  
+  )
+}
+
+export default App
