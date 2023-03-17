@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 import Drawbar from './Drawbar';
 import{Grid } from '@mui/material';
+import useStyles from "../Button"
 
 
 
@@ -21,6 +22,8 @@ import{Grid } from '@mui/material';
 
 
 const Navbar = ({links}) => {
+
+  const classes=useStyles()
 
   const theme=useTheme()
 
@@ -45,7 +48,7 @@ const Navbar = ({links}) => {
           </IconButton> */}
 
           {isMatch  ? <>  {<Drawbar links={links} setValue={setValue} />}</>:
-          <Grid container spacing={2}>
+          <Grid container spacing={1}>
            
                      
                       <Grid item xs={10}>
@@ -70,13 +73,13 @@ const Navbar = ({links}) => {
      
   
                       </Grid>
-                      <Grid item xs={1} />
+                      <Grid item xs={2} />
                      
                   </Grid>}
 
-                  <Button variant='contained' sx={{backgroundColor:"green",fontFamily: 'Nunito'}}>Signup</Button>
+                  <Button variant='contained' className={classes.button}>Signup</Button>
                   <Grid item xs={0.5}></Grid>
-                  <Button variant='contained' sx={{backgroundColor:"green",fontFamily: 'Nunito'}}>Login</Button>
+                  <Button variant='contained' className={classes.button}>Login</Button>
   
   
      </Toolbar>

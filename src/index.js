@@ -15,6 +15,7 @@ const theme= createTheme({
 
   typography:{
     fontFamily:"Nunito",
+  
     subtitle1:{
       fontWeight:400,
       color:"rgba(36,0,27,0.8574561403508771)"

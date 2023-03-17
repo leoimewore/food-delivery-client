@@ -1,5 +1,7 @@
 import React from 'react'
 import { Box,CssBaseline,Grid,Button } from '@mui/material'
+import { fontStyle } from '@mui/system'
+import useStyles from '../Button'
 
 
 const style={
@@ -20,6 +22,9 @@ const style={
 }
 
 const Homepage = () => {
+
+
+  const classes=useStyles()
   return (
    <>
 
@@ -32,10 +37,10 @@ const Homepage = () => {
           position: 'fixed',
           bottom: 0,
           left: 0,
-          background: "linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent)",
+          background: "linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent)",
           width: '100%',
           height:"100%",
-          bgcolor: 'rgba(0, 0, 0, 0.7)',
+          bgcolor: 'rgba(0, 0, 0, 0.4)',
           color: 'white',
           padding: '10px',
           display:"flex",
@@ -57,14 +62,14 @@ const Homepage = () => {
  
      <Grid item xs={8} >
         <h1 style={{color:"#fff",display:"flex",alignItems:"center",
-        justifyContent:"center",fontSize:"3rem",textAlign:"center"}}>
+        justifyContent:"center",fontSize:"3rem",textAlign:"center",textTransform:"capitalize",
+        fontStyle:"italic"}}>
           Welcome to Naija Foods Restaurant
           </h1>
           <Button variant="contained" sx={{borderRadius:"0.5em",
        width:"15em",padding:"0.5em",
-       backgroundColor:"green",
        fontFamily: 'Nunito',
-       color:"primary"}}>Order Now</Button>
+       color:"primary"}} className={classes.button}>Order Now</Button>
      </Grid>
  
       
