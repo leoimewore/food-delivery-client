@@ -5,6 +5,7 @@ import { Box,CssBaseline,Grid,Button } from '@mui/material'
 const style={
   
   minHeight:"100vh",
+  display:"relative",
   width:"100%",
   objectFit:"cover",
   backgroundImage:`url(${process.env.PUBLIC_URL + "/assets/homeimage2.jpg"})`,
@@ -28,7 +29,7 @@ const Homepage = () => {
     container
     
         sx={{
-          position: 'absolute',
+          position: 'fixed',
           bottom: 0,
           left: 0,
           background: "linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent)",
@@ -44,6 +45,14 @@ const Homepage = () => {
           
         }}
       >
+     
+
+
+
+
+
+
+
          <CssBaseline/>
  
      <Grid item xs={8} >
