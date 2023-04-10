@@ -28,14 +28,14 @@ const App = () => {
 
  
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={window.location.pathname || ''}>
     { !flag&&<Navbar links={links}
      foodData={foodData}
      setFoodData={setFoodData}
      flag={flag}
      setFlag={setFlag}/>}
      <Routes>
-     <Route path="/" element={<Homepage setFlag={setFlag}/>}/>
+     <Route exact path="/" element={<Homepage setFlag={setFlag}/>}/>
      <Route path="menu" element={<Menu 
         foodData={foodData}
         setFoodData={setFoodData}
