@@ -33,7 +33,7 @@ function handleChange(event, newValue){
 <AppBar sx={{background:"green",fontFamily: 'Nunito',color:"#fff",textTransform:"uppercase",height:"5rem"}} elevation={0}>
      <Toolbar sx={{width:"100%",margin:"0 auto"}}>
      <h1 style={{fontSize:"30px"}}>Naija Foods</h1>
-     <Grid container spacing={1}>
+     <Grid container>
       <Grid item xs={10}>
         <SearchBar
         foodData={foodData}
@@ -58,10 +58,10 @@ function handleChange(event, newValue){
  
     
     <Box sx={{ flexGrow: 1 ,marginTop:"5em",padding:"2em"}}>
-    <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+    <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 1, sm: 4, md: 12 }}>
 
       {foodData.map((data, index) => (
-        <Grid item xs={2} sm={4} md={4} key={index} sx={{display:"flex"}}>
+        <Grid item xs={2} sm={2} md={4} key={index} sx={{display:"flex"}}>
           {/* <Item>xs=2</Item> */}
           <Card sx={{maxWidth:400}}>
             <CardActionArea>

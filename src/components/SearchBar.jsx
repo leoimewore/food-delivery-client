@@ -36,7 +36,7 @@ const SearchBar = ({foodData,setFoodData}) => {
             color="secondary"
             inputProps={{ style: { fontFamily: 'nunito', color: 'white',borderColor:"#fff"} }}
             sx={{
-                width: { sm: 300, md: 400 },
+                width: { sm: 200, md: 300 },
                 "& .MuiInputBase-root": {
                     height: 40
                 }
