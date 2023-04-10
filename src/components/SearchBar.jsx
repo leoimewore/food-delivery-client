@@ -43,7 +43,7 @@ const SearchBar = ({foodData,setFoodData}) => {
             }}
            
         />
-        <IconButton type='submit' aria-label="search">
+        <IconButton aria-label="search">
             <SearchIcon style={{fill:"#fff"}}/>
 
         </IconButton>

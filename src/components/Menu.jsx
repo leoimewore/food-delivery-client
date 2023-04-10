@@ -41,7 +41,7 @@ function handleChange(event, newValue){
 
       </Grid>
       <Grid item xs={2}>
-        <IconButton type='submit' aria-label="home" component={Link} to="/">
+        <IconButton  aria-label="home" component={Link} to="/">
         <HomeIcon style={{fill:"#fff"}}/>
 
         </IconButton>
