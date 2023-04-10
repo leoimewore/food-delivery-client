@@ -38,9 +38,24 @@ const theme= createTheme({
     }
 
   },
+  subtitle1:{
+  
+   
+  }
  
   
 })
+
+theme.typography.h3 = {
+  fontFamily:"Nunito",
+  fontSize: '0.8rem',
+  '@media (min-width:600px)': {
+    fontSize: '1rem',
+  },
+  [theme.breakpoints.up('md')]: {
+    fontSize: '1.5rem',
+  },
+};
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

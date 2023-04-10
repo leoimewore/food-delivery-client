@@ -4,14 +4,15 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
 import {Link }from "react-router-dom"
 
-const Drawbar = ({links,setValue}) => {
+const Drawbar = ({links,setValue,flag}) => {
 
 const [open, setOpen] = useState(false) 
   return (
    <>
-   <Drawer PaperProps={{
+  { <Drawer PaperProps={{
     sx:{backgroundColor:"primary.main"}
    }} open={open} anchor={'left'} onClose={()=>(setOpen(false))}>
+    
    <List>
     {links.map((link,index)=>(
     
@@ -24,10 +25,10 @@ const [open, setOpen] = useState(false)
        </ListItemButton>
     ))}
       </List>
-      </Drawer>
-   <IconButton onClick={()=>(setOpen(!open))} sx={{color:"white"}}>
+      </Drawer>}
+   {<IconButton onClick={()=>(setOpen(!open))} sx={{color:"white"}}>
     <MenuIcon/>
-   </IconButton>
+   </IconButton>}
    
    </>
   )

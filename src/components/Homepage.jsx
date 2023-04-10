@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box,CssBaseline,Grid,Button } from '@mui/material'
-import { fontStyle } from '@mui/system'
 import useStyles from '../Button'
+import {Link } from "react-router-dom"
 
 
 const style={
@@ -21,7 +21,7 @@ const style={
 
 }
 
-const Homepage = () => {
+const Homepage = ({setFlag}) => {
 
 
   const classes=useStyles()
@@ -69,7 +69,12 @@ const Homepage = () => {
           <Button variant="contained" sx={{borderRadius:"0.5em",
        width:"15em",padding:"0.5em",
        fontFamily: 'Nunito',
-       color:"primary"}} className={classes.button}>Order Now</Button>
+       color:"primary"}} 
+       className={classes.button} 
+       component={Link}
+       to="/menu"
+       onClick={()=>setFlag(true)}
+       >Order Now</Button>
      </Grid>
  
       
