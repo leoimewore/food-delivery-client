@@ -1,8 +1,9 @@
 import React from 'react'
-import { IconButton, TextField } from '@mui/material'
+import { IconButton, TextField,Grid } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search';
 import { useState,useEffect } from 'react';
 import menuData from './Slider/data';
+import { width } from '@mui/system';
 
 
 
@@ -12,7 +13,7 @@ const SearchBar = ({foodData,setFoodData}) => {
   
 
    function handleSearch(event){
-        const newData=menuData.filter((data)=>data.header.toLowerCase().split(" ").join("").includes(event.target.value))
+        const newData=menuData.filter((data)=>data.header.toLowerCase().split(" ").join("").includes(event.target.value.toLowerCase()))
         setFoodData(newData)
     }
  
@@ -25,7 +26,11 @@ const SearchBar = ({foodData,setFoodData}) => {
 
 
   return (
-    <form style={{marginLeft:"2em"}}>
+    <Grid container>
+        <Grid item xs={12}>
+
+       
+    <form style={{marginLeft:"2em",display:"flex"}}>
         <TextField
             id="search-bar"
             className='text'
@@ -36,19 +41,21 @@ const SearchBar = ({foodData,setFoodData}) => {
             color="secondary"
             inputProps={{ style: { fontFamily: 'nunito', color: 'white',borderColor:"#fff"} }}
             sx={{
-                width: { sm: 300, md: 500 },
+                width: { sm: 300, md: 600 },
                 "& .MuiInputBase-root": {
                     height: 40
                 }
             }}
            
         />
-        <IconButton aria-label="search">
+        <IconButton aria-label="search" sx={{}}>
             <SearchIcon style={{fill:"#fff"}}/>
 
         </IconButton>
 
     </form>
+    </Grid>
+    </Grid>
   )
 }
 

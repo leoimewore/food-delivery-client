@@ -134,10 +134,17 @@ const Navbar = ({links,foodData,setFoodData,flag,setFlag}) => {
                   <Grid item xs={0.5}></Grid>
                   <Button variant='contained' className={classes.button}>Login</Button>
    */}
-
-   {flag &&<SearchBar
+   <Grid container>
+    <Grid item>
+    {flag &&<SearchBar
     foodData={foodData}
     setFoodData={setFoodData}/>}
+
+    </Grid>
+
+   </Grid>
+
+  
   
      </Toolbar>
     </AppBar>
