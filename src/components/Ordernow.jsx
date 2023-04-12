@@ -16,7 +16,7 @@ import HomeIcon from '@mui/icons-material/Home';
 
 
 
-const Menu = ({foodData,setFoodData}) => {
+const Ordernow = ({foodData,setFoodData}) => {
 
   const [value,setValue]=useState(0)
 
@@ -30,7 +30,7 @@ function handleChange(event, newValue){
   return (
     <>
 
-<AppBar sx={{background:"green",fontFamily: 'Nunito',color:"#fff",textTransform:"uppercase",height:"5rem"}} elevation={0}>
+{/* <AppBar sx={{background:"green",fontFamily: 'Nunito',color:"#fff",textTransform:"uppercase",height:"5rem"}} elevation={0}>
      <Toolbar sx={{width:"100%",margin:"0 auto"}}>
      <h1 style={{fontSize:"30px"}}>Naija Foods</h1>
      <Grid container>
@@ -54,16 +54,16 @@ function handleChange(event, newValue){
      </Grid>
 
       </Toolbar>
-    </AppBar>
+    </AppBar> */}
  
     
     <Box sx={{ flexGrow: 1 ,marginTop:"5em",padding:"2em"}}>
-    <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 1, sm: 4, md: 12 }}>
+    <Grid container spacing={{ xs: 2,md:2 }} columns={{ xs: 2, sm: 4, md: 12 }}>
 
       {foodData.map((data, index) => (
-        <Grid item xs={2} sm={2} md={4} key={index} sx={{display:"flex"}}>
+        <Grid item xs={2} sm={2} md={4} key={index} sx={{display:"flex",justifyContent:"center"}}>
           {/* <Item>xs=2</Item> */}
-          <Card sx={{maxWidth:400}}>
+          <Card sx={{maxWidth:350}}>
             <CardActionArea>
             <CardMedia
             component="img"
@@ -91,4 +91,4 @@ function handleChange(event, newValue){
   )
 }
 
-export default Menu
+export default Ordernow

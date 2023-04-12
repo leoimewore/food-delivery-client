@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './components/Navbar';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from './components/Homepage';
-import Menu from "./components/Menu"
+import Ordernow from "./components/Ordernow"
 import menuData from "./components/Slider/data"
 import { useState,useEffect } from 'react';
 
@@ -28,15 +28,15 @@ const App = () => {
 
  
   return (
-    <BrowserRouter basename={window.location.pathname || ''}>
-    { !flag&&<Navbar links={links}
+    <BrowserRouter>
+    {<Navbar links={links}
      foodData={foodData}
      setFoodData={setFoodData}
      flag={flag}
      setFlag={setFlag}/>}
      <Routes>
      <Route exact path="/" element={<Homepage setFlag={setFlag}/>}/>
-     <Route path="menu" element={<Menu 
+     <Route path="ordernow" element={<Ordernow
         foodData={foodData}
         setFoodData={setFoodData}
         />} 

@@ -70,9 +70,9 @@ const Homepage = ({setFlag}) => {
        width:"15em",padding:"0.5em",
        fontFamily: 'Nunito',
        color:"primary"}} 
-       className={classes.button} 
+       
        component={Link}
-       to="/menu"
+       to="/ordernow"
        onClick={()=>setFlag(true)}
        >Order Now</Button>
      </Grid>
