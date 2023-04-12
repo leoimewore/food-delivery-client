@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './components/Navbar';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {HashRouter, Routes, Route } from "react-router-dom";
 import Homepage from './components/Homepage';
 import Ordernow from "./components/Ordernow"
 import menuData from "./components/Slider/data"
@@ -28,7 +28,7 @@ const App = () => {
 
  
   return (
-    <BrowserRouter>
+    <HashRouter>
     {<Navbar links={links}
      foodData={foodData}
      setFoodData={setFoodData}
@@ -42,7 +42,7 @@ const App = () => {
         />} 
      />
      </Routes>
-    </BrowserRouter>
+    </HashRouter>
    
 
 
