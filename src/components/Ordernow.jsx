@@ -58,12 +58,16 @@ function handleChange(event, newValue){
  
     
     <Box sx={{ flexGrow: 1 ,marginTop:"5em",padding:"2em"}}>
-    <Grid container spacing={{ xs: 2,md:2 }} columns={{ xs: 2, sm: 4, md: 12 }}>
+    <Grid container spacing={{ xs: 2,md:2 }} columns={{ xs: 2, sm: 4, md: 12}}>
 
       {foodData.map((data, index) => (
         <Grid item xs={2} sm={2} md={4} key={index} sx={{display:"flex",justifyContent:"center"}}>
           {/* <Item>xs=2</Item> */}
-          <Card sx={{maxWidth:350}}>
+          <Card sx={{maxWidth:350,':hover': {
+              boxShadow: 20, // theme.shadows[20]
+            }}}
+           
+          >
             <CardActionArea>
             <CardMedia
             component="img"
