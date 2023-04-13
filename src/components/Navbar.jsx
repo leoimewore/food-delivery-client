@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { AppBar,Toolbar,Tabs,Tab,useTheme,useMediaQuery,IconButton } from '@mui/material'
+import { AppBar,Toolbar,Tabs,Tab,useTheme,useMediaQuery,IconButton, Typography,Stack } from '@mui/material'
 
 import { useState} from 'react';
 
@@ -9,6 +9,7 @@ import{Grid} from '@mui/material';
 import {Link} from "react-router-dom"
 import SearchBar from './SearchBar';
 import HomeIcon from '@mui/icons-material/Home';
+import RestaurantIcon from '@mui/icons-material/Restaurant';
 
 
 
@@ -80,28 +81,24 @@ const Navbar = ({links,foodData,setFoodData,flag,setFlag}) => {
      textTransform:"uppercase"}}>
 
 
-<AppBar sx={{background:"green",fontFamily: 'Nunito',color:"#fff",textTransform:"uppercase",height:"5rem"}} elevation={0}>
-     <Toolbar sx={{width:"100%",margin:"0 auto"}}>
-     {flag===true &&<Grid item xs={2}>
-        <IconButton  aria-label="home" component={Link} to="/" onClick={()=>(setFlag(!flag))}>
-        <HomeIcon style={{fill:"#fff"}}/>
-
+<AppBar elevation={0}>
+     <Toolbar>
+     
+        <IconButton size='large' edge="start" aria-label="home" arial-label="logo" component={Link} to="/" onClick={()=>(setFlag(!flag))}>
+        <RestaurantIcon style={{fill:"#fff"}}/>
         </IconButton>
 
-        </Grid>}
-          <h1 style={{fontSize:"30px"}}
-          component={Link}
-          to="/"
-          >Naija Foods</h1>
-          {/* <IconButton>
-           <MenuIcon sx={{color:"#fff",fontSize:"2rem"}}/>
-          </IconButton> */}
+       
+        <Typography variant='h5' component="div" sx={{flexGrow:1}} color="#fff">
+          Naija Foods
+        </Typography>
+          
 
           {isMatch && flag===false ? <>  {<Drawbar links={links} setValue={setValue} flag={flag} />}</>:
-              flag===false &&<Grid container spacing={1}>
+              flag===false &&<Stack direction="row" spacing={2}>
            
                      
-                       <Grid item xs={10}>
+                       
                           <Tabs 
                           TabIndicatorProps={{
                             style: {
@@ -121,12 +118,8 @@ const Navbar = ({links,foodData,setFoodData,flag,setFlag}) => {
                              
   
                           </Tabs>
-     
-  
-                      </Grid>
-                      <Grid item xs={2} />
                      
-                  </Grid>}
+                  </Stack>}
                   <Grid item xs={8} />
                  
 
@@ -134,15 +127,15 @@ const Navbar = ({links,foodData,setFoodData,flag,setFlag}) => {
                   <Grid item xs={0.5}></Grid>
                   <Button variant='contained' className={classes.button}>Login</Button>
    */}
-   <Grid container>
-    <Grid item>
-    {flag &&<SearchBar
+   
+    <Stack>
+    {flag===true &&<SearchBar
     foodData={foodData}
     setFoodData={setFoodData}/>}
 
-    </Grid>
+    </Stack>
 
-   </Grid>
+  
 
   
   
