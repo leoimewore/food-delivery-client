@@ -3,6 +3,8 @@ import logo1 from "./images/goatmeatpeppersoup.jpg"
 import logo2 from "./images/fufuandegusi.jpg"
 import logo3 from "./images/suyasnack.jpg"
 import logo4 from "./images/pie&&bunssnack.jpg"
+import logo5 from "./images/friedrice.jpg"
+import logo6 from "./images/beansanddodo.jpeg"
 
 
 
@@ -34,6 +36,21 @@ const menuData=[
 
     {
         image:logo4,
+        header:"SmallChops and Meat-pie",
+        desc:"Baked snacks for your pleasure"
+
+
+    },
+    {
+        image:logo5,
+        header:"Fried Rice and Tilapia",
+        desc:"Get the grilled fish vibe"
+
+
+    },
+
+    {
+        image:logo6,
         header:"SmallChops and Meat-pie",
         desc:"Baked snacks for your pleasure"
 
