@@ -59,13 +59,13 @@ function handleChange(event, newValue){
             }}}
            
           >
-            <CardActionArea onClick={(event)=>handleOpen({"img":data.image,"title":data.header,"desc":data.desc})}>
+            <CardActionArea onClick={(event)=>handleOpen({"img":data.image,"title":data.header,"desc":data.desc,"info":data.info})}>
             <CardMedia
             component="img"
             image={data.image}
             sx={{color:"primary"}}/>
             <CardContent>
-              <Typography variant="h3" color="primary.main">{data.header}</Typography>
+              <Typography variant="h3" color="primary.main" sx={{textTransform:"capitalize"}}>{data.header}</Typography>
               <Typography variant='subtitle1' color="grey" sx={{fontFamily:'sans-serif',fontSize:"1em",}}>{data.desc}</Typography>
 
             </CardContent>
@@ -75,7 +75,7 @@ function handleChange(event, newValue){
 
             <CardActions>
             <Button variant='outlined'>
-              BUY
+              BUY {data.price}
             </Button>
 
             </CardActions>

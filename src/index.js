@@ -33,8 +33,9 @@ const theme= createTheme({
 
   },
     h6:{
-      fontWeight:700,
-      color:"rgba(36,0,27,0.8574561403508771)"
+     
+      color:"rgba(36,0,27,0.8574561403508771)",
+      fontWeight:"thin"
     }
 
   },

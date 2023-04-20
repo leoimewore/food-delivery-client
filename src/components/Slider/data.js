@@ -12,24 +12,33 @@ const menuData=[
     {
         image:logo,
         header:"Premuim Nigeria Jollof Rice",
-        desc:"West-African finest delicacy"
+        desc:"West-African finest delicacy",
+        price:"$25.99",
+        info:"Fried Jasmine rice made with health vegetable oils and garnished with carrots,lettuce,green onions,corn,tomatoes and freshly fried Tilapia"
     },
     {
         image:logo1,
         header:"Spicey Goat Meat peppersoup",
-        desc:"Get your tastebuds spicy spicy "
+        desc:"Get your tastebuds spicy spicy ",
+        price:"$25.99",
+        info:"Fried Jasmine rice made with health vegetable oils and garnished with carrots,lettuce,green onions,corn,tomatoes and freshly fried Tilapia"
 
     },
     {
         image:logo2,
         header:"Fufu egusi soup and Goat/Beef",
-        desc:"Straight from the Motherland"
+        desc:"Straight from the Motherland",
+        price:"$25.99",
+        info:"Fried Jasmine rice made with health vegetable oils and garnished with carrots,lettuce,green onions,corn,tomatoes and freshly fried Tilapia"
     },
 
     {
         image:logo3,
-        header:"SUYA",
-        desc:"Seasoned Suya as an entree"
+        header:"suya",
+        desc:"Seasoned Suya as an entree",
+        price:"$25.99",
+        info:"Fried Jasmine rice made with health vegetable oils and garnished with carrots,lettuce,green onions,corn,tomatoes and freshly fried Tilapia",
+        
 
 
     },
@@ -37,14 +46,19 @@ const menuData=[
     {
         image:logo4,
         header:"SmallChops and Meat-pie",
-        desc:"Baked snacks for your pleasure"
+        desc:"Baked snacks for your pleasure",
+        price:"$25.99",
+        
+        info:"Fried Jasmine rice made with health vegetable oils and garnished with carrots,lettuce,green onions,corn,tomatoes and freshly fried Tilapia"
 
 
     },
     {
         image:logo5,
         header:"Fried Rice and Tilapia",
-        desc:"Get the grilled fish vibe"
+        desc:"Get the grilled fish vibe",
+        price:"$25.99",
+        info:"Fried Jasmine rice made with health vegetable oils and garnished with carrots,lettuce,green onions,corn,tomatoes and freshly fried Tilapia"
 
 
     },
@@ -52,7 +66,10 @@ const menuData=[
     {
         image:logo6,
         header:"SmallChops and Meat-pie",
-        desc:"Baked snacks for your pleasure"
+        desc:"Baked snacks for your pleasure",
+        price:"$25.99",
+        
+        info:"Fried Jasmine rice made with health vegetable oils and garnished with carrots,lettuce,green onions,corn,tomatoes and freshly fried Tilapia"
 
 
     },
