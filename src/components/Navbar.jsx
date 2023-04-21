@@ -10,6 +10,7 @@ import {Link} from "react-router-dom"
 import SearchBar from './SearchBar';
 import HomeIcon from '@mui/icons-material/Home';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
+import ShoppingCartSharpIcon from '@mui/icons-material/ShoppingCartSharp';
 
 
 
@@ -127,6 +128,8 @@ const Navbar = ({links,foodData,setFoodData,flag,setFlag}) => {
                   <Grid item xs={0.5}></Grid>
                   <Button variant='contained' className={classes.button}>Login</Button>
    */}
+
+  
    
     <Stack>
     {flag===true &&<SearchBar
@@ -134,6 +137,10 @@ const Navbar = ({links,foodData,setFoodData,flag,setFlag}) => {
     setFoodData={setFoodData}/>}
 
     </Stack>
+
+    <IconButton size='large'>
+    <ShoppingCartSharpIcon style={{fill:"white"}}/>
+   </IconButton>
 
   
 

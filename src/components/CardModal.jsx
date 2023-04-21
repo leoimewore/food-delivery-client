@@ -1,16 +1,12 @@
 import React from 'react'
-import { Card, CardActionArea, CardActions,CardHeader,Avatar,
+import { Card, CardActions,CardHeader,
     CardContent, CardMedia, Typography,Button,Modal,IconButton,Collapse, TextField} from '@mui/material';
-import { useState} from 'react';
+
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
-import { red } from '@mui/material/colors';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { styled } from '@mui/material/styles';
-import { StayPrimaryLandscape } from '@mui/icons-material';
+
 
 
 // const theme = createMuiTheme({
@@ -66,7 +62,7 @@ const CardModal = ({open,handleClose,foodData,setFoodData,showModal,setShowModal
             aria-describedby="modal-modal-description"
             
         >
-       <Card sx={{ maxWidth: 550 ,...style}}>
+       <Card sx={{ maxWidth: 400 ,...style}}>
         <CardHeader
         title={<Typography sx={{color:"green",fontSize:"25px",textTransform:"capitalize"}}>{showModal.title}</Typography>}
         
@@ -93,7 +89,7 @@ const CardModal = ({open,handleClose,foodData,setFoodData,showModal,setShowModal
         </IconButton>
         <TextField 
           sx={{
-            width: { sm: 50},
+            width: { sm: 50,xs:50},
             "& .MuiInputBase-root": {
                 height:45
             },

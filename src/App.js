@@ -5,6 +5,7 @@ import Homepage from './components/Homepage';
 import Ordernow from "./components/Ordernow"
 import menuData from "./components/Slider/data"
 import { useState,useEffect } from 'react';
+import Contact from './components/Contact';
 
 
 
@@ -40,7 +41,9 @@ const App = () => {
         foodData={foodData}
         setFoodData={setFoodData}
         />} 
+      
      />
+     <Route exact path="contactus" element={<Contact/>}/>
      </Routes>
     </HashRouter>
    
