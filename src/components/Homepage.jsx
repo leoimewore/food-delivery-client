@@ -2,6 +2,10 @@ import React from 'react'
 import { Box,CssBaseline,Grid,Button } from '@mui/material'
 import useStyles from '../Button'
 import {Link } from "react-router-dom"
+import Login from './Login'
+import { useTheme } from '@mui/material/styles';
+import {useMediaQuery }from '@mui/material'
+import Register from './Register'
 
 
 const style={
@@ -21,7 +25,19 @@ const style={
 
 }
 
-const Homepage = ({setFlag}) => {
+const Homepage = ({setFlag,setOpenLogin,openLogin}) => {
+
+
+
+
+
+  const handleOrderPage=()=>{
+
+    setOpenLogin(true)
+    // setFlag(true)
+  }
+
+  const handleLoginClose = () => setOpenLogin(false);
 
 
   const classes=useStyles()
@@ -71,15 +87,20 @@ const Homepage = ({setFlag}) => {
        fontFamily: 'Nunito',
        color:"primary"}} 
        
-       component={Link}
-       to="/ordernow"
-       onClick={()=>setFlag(true)}
+      //  component={Link}
+      //  to="/ordernow"
+       onClick={handleOrderPage}
        >Order Now</Button>
      </Grid>
  
       
   
   </Grid>
+
+
+  <Login openLogin={openLogin} setOpenLogin={setOpenLogin} handleLoginClose={handleLoginClose}/>
+  
+
 </Box>
 
 

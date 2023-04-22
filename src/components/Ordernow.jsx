@@ -7,6 +7,7 @@ import { Card, CardActionArea, CardActions,
 import { useState} from 'react';
 import CardModal from './CardModal';
 import menuData from './Slider/data';
+import Login from './Login';
 
 
 
@@ -19,7 +20,7 @@ import menuData from './Slider/data';
 
 
 
-const Ordernow = ({foodData,setFoodData}) => {
+const Ordernow = ({foodData,setFoodData,openLogin,setOpenLogin}) => {
 
   const [showModal, setShowModal] = useState({})
 
@@ -45,10 +46,7 @@ function handleChange(event, newValue){
 
   return (
     <>
-
- 
-    
-    <Box sx={{ flexGrow: 1 ,marginTop:"5em",padding:"2em"}}>
+    { openLogin &&<Box sx={{ flexGrow: 1 ,marginTop:"5em",padding:"2em"}}>
     <Grid container spacing={{ xs: 2,md:2 }} columns={{ xs: 2, sm: 4, md: 12}}>
 
       {foodData.map((data, index) => (
@@ -88,7 +86,7 @@ function handleChange(event, newValue){
       ))}
       <CardModal open={open} handleClose={handleClose} foodData={foodData} setFoodData={setFoodData} showModal={showModal} setShowModal={setShowModal}/>
     </Grid>
-  </Box>
+  </Box>}
   </>
   )
 }

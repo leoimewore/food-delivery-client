@@ -39,7 +39,10 @@ const theme= createTheme({
     }
 
   },
-  subtitle1:{
+  h2:{
+  
+    fontSize:"2em",
+    color:"red"
   
    
   }
@@ -54,7 +57,7 @@ theme.typography.h3 = {
     fontSize: '1rem',
   },
   [theme.breakpoints.up('md')]: {
-    fontSize: '1.5rem',
+    fontSize: '2rem',
   },
 };
 

@@ -26,7 +26,7 @@ import ShoppingCartSharpIcon from '@mui/icons-material/ShoppingCartSharp';
 
 
 
-const Navbar = ({links,foodData,setFoodData,flag,setFlag}) => {
+const Navbar = ({links,foodData,setFoodData,flag,setFlag,openLogin}) => {
 
 
 
@@ -132,7 +132,7 @@ const Navbar = ({links,foodData,setFoodData,flag,setFlag}) => {
   
    
     <Stack>
-    {flag===true &&<SearchBar
+    {!openLogin&&<SearchBar
     foodData={foodData}
     setFoodData={setFoodData}/>}
 
