@@ -1,6 +1,8 @@
 import React from 'react'
 
 import { AppBar,Toolbar,Tabs,Tab,useTheme,useMediaQuery,IconButton, Typography,Stack } from '@mui/material'
+import Badge from '@mui/material/Badge';
+import {styled} from "@mui/material/styles"
 
 import { useState} from 'react';
 
@@ -11,7 +13,20 @@ import SearchBar from './SearchBar';
 import HomeIcon from '@mui/icons-material/Home';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
 import ShoppingCartSharpIcon from '@mui/icons-material/ShoppingCartSharp';
+import { useCartContext } from '../Context/CartContext';
 
+
+
+const StyledBadge = styled(Badge)(({ theme }) => ({
+  '& .MuiBadge-badge': {
+    right: -3,
+    top: 13,
+    border: `2px solid ${theme.palette.background.paper}`,
+    padding: '0 4px',
+    color:"white",
+    backgroundColor:"red"
+  },
+}));
 
 
 
@@ -27,6 +42,8 @@ import ShoppingCartSharpIcon from '@mui/icons-material/ShoppingCartSharp';
 
 
 const Navbar = ({links,foodData,setFoodData,flag,setFlag,openLogin}) => {
+
+  const {setShowFoodCart,showFoodCart}=useCartContext()
 
 
 
@@ -86,7 +103,11 @@ const Navbar = ({links,foodData,setFoodData,flag,setFlag,openLogin}) => {
      <Toolbar>
      
         <IconButton size='large' edge="start" aria-label="home" arial-label="logo" component={Link} to="/" onClick={()=>(setFlag(!flag))}>
-        <RestaurantIcon style={{fill:"#fff"}}/>
+          
+          <RestaurantIcon style={{fill:"#fff"}}/>
+
+        
+        
         </IconButton>
 
        
@@ -138,8 +159,13 @@ const Navbar = ({links,foodData,setFoodData,flag,setFlag,openLogin}) => {
 
     </Stack>
 
-    <IconButton size='large'>
-    <ShoppingCartSharpIcon style={{fill:"white"}}/>
+    <IconButton size='large'   onClick={()=>setShowFoodCart(true)} component={Link} to="/cart">
+
+      <StyledBadge badgeContent={3} style={{fill:"red"}}>
+      <ShoppingCartSharpIcon style={{fill:"white"}}/>
+
+      </StyledBadge>
+    
    </IconButton>
 
   

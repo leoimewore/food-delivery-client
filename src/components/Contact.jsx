@@ -62,7 +62,7 @@ const Contact = () => {
 
 
         <Box sx={{backgroundColor:"white",padding:"2em",borderRadius:"6px",width:"35%",position:"absolute",top:"20%",left:"10%",...dynamicStyles}}>
-            <Typography variant='h2' color="primary" sx={{paddingBottom:"1em"}}>CONTACT US</Typography>
+            <Typography variant='h2' color="primary" sx={{paddingBottom:"1em",fontSize:"2em"}}>CONTACT US</Typography>
             <form>
             <Grid container spacing={1} xs={12}>
                 <Grid item xs={12}>

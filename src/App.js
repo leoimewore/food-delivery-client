@@ -9,6 +9,9 @@ import Contact from './components/Contact';
 import Login from './components/Login';
 import Homepage from "./components/Homepage.jsx"
 import Register from "./components/Register"
+import {CartContext} from "./Context/CartContext.jsx"
+import Cart from "./components/Cart/Cart"
+
 
 
 
@@ -34,6 +37,7 @@ const App = () => {
 
  
   return (
+    <CartContext>
     <HashRouter>
     {<Navbar links={links}
      foodData={foodData}
@@ -53,10 +57,12 @@ const App = () => {
      />
      <Route exact path="contactus" element={<Contact/>}/>
      <Route exact path="register" element={<Register/>}/>
+     {/* <Route exact path="cart" element={<Cart/>}/> */}
     
      
      </Routes>
     </HashRouter>
+    </CartContext>
    
 
 
